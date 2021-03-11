@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Webpack 5 [Admitad Projects]</title>
+
+		<link rel="icon" type="image/png" href="/img/favicon.png"/>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/webpack.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/nord.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides/00-intro/index.html" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/01-myself/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/02-bundler/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/03-where/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/04-core-concept/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/05-alternative-bundlers/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/06-how-to/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/07-webpack-5/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/08-webpack-mf/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+				<section data-markdown="slides/09-end/index.md" data-separator-vertical="^-----\n" data-separator-notes="^Note:"></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/menu/menu.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				history: true,
+				width: 1280,
+				height: 720,
+				navigationMode: "linear",
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu ],
+				menu: {
+					side: 'left',
+					width: 'normal', 	// 'normal', 'wide', 'third', 'half', 'full', or any valid css length value
+					numbers: false, // Add slide numbers to the titles in the slide list
+					titleSelector: 'h1, h2, h3, h4, h5, h6',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: true,
+					markers: true,
+					openButton: true,
+					keyboard: true,
+					sticky: false,
+					autoOpen: false,
+					delayInit: false,
+					openOnInit: false,
+					loadIcons: true
+				},
+			});
+
+			// Open all links in new window
+			Reveal.addEventListener('ready', function() {
+				let links = document.links;
+				for (let i = 0, linksLength = links.length; i < linksLength; i++) {
+					links[i].target = '_blank';
+				}
+
+				setTimeout(() => {window.dispatchEvent(new Event('resize'));},10);
+			});
+		</script>
+	</body>
+</html>
