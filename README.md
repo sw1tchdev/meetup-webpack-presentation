@@ -1,7 +1,7 @@
 # ADP Meetup Webpack 5
 Presentation about Webpack 5 from ADP Meetup
 
-### [Link to Presentation](https://sw1tchdev.github.io/adp-meetup-webpack-presentation/)
+### [Link to Presentation](https://sw1tchdev.github.io/meetup-webpack-presentation/)
 
 ## Install
 ```shell
